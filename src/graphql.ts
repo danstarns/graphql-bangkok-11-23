@@ -108,6 +108,10 @@ export const yoga = createYoga({
   schema: tracedSchema,
   context: (req) => ({
     userid: req.request.headers.get("userid"),
-    GraphQLOTELContext: new GraphQLOTELContext(),
+    GraphQLOTELContext: new GraphQLOTELContext({
+      includeResult: true,
+      includeVariables: true,
+      includeContext: true,
+    }),
   }),
 });

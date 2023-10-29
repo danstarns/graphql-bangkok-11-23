@@ -5,6 +5,7 @@
     "start": "ts-node ./src/app.ts"
   },
   "dependencies": {
+    "@graphql-debugger/plugin-express": "^0.0.0-alpha.63",
     "@graphql-debugger/trace-schema": "^0.0.0-alpha.63",
     "@graphql-tools/schema": "10.0.0",
     "@prisma/client": "^5.5.2",

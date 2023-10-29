@@ -1,0 +1,43 @@
+mutation SignUp {
+  signup(email: "dan@email.com", password: "password")
+}
+
+mutation Login {
+  login(email: "dan@email.com", password: "password")
+}
+
+# REQ.headers.userid = login.id
+mutation CreateLegalDocument {
+  createDocument(title: "Legal 12", content: "This document is legal") {
+    id
+    title
+    content
+    authorId
+  }
+}
+
+# REQ.headers.userid = login.id
+mutation CreateInvoiceDocument {
+  createDocument(title: "Invoice 123", content: "This document is an invoice") {
+    id
+    title
+    content
+    authorId
+  }
+}
+
+# REQ.headers.userid = login.id
+query Documents {
+  documents
+}
+
+# REQ.headers.userid = login.id
+
+query Document {
+  document(title: "Legal 12") {
+    id
+    title
+    content
+    authorId
+  }
+}
