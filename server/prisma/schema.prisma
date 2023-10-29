@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["tracing"]
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id       String     @id @default(uuid())
+  email    String     @unique
+  password String
+  document Document[]
+}
+
+model Document {
+  id       String @id @default(uuid())
+  title    String @unique
+  content  String
+  author   User   @relation(fields: [authorId], references: [id])
+  authorId String
+}

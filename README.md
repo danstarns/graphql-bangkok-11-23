@@ -13,9 +13,19 @@ From button click to database call, how much do you really know what's going on?
 
 <img src="./docs/screenshot.png" width="100%" />
 
-## GraphQL Debugger
+## Getting Started
 
-- https://graphql-debugger.com/
+### Running GraphQL Debugger
+
+TODO
+
+### Running the backend
+
+TODO
+
+## Running the frontend
+
+TODO
 
 ## License
 
