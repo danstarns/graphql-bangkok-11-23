@@ -17,15 +17,19 @@ From button click to database call, how much do you really know what's going on?
 
 ### Running GraphQL Debugger
 
-TODO
+```
+$ npx graphql-debugger
+```
 
-### Running the backend
+- http://localhost:16686
 
-TODO
+### Running the server
 
-## Running the frontend
+```
+$ npm start
+```
 
-TODO
+- http://localhost:4000/graphql
 
 ## License
 
