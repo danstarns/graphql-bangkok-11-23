@@ -5,8 +5,8 @@
     "start": "ts-node ./src/app.ts"
   },
   "dependencies": {
-    "@graphql-debugger/plugin-express": "^0.0.0-alpha.64",
-    "@graphql-debugger/trace-schema": "^0.0.0-alpha.64",
+    "@graphql-debugger/plugin-express": "^0.0.0-alpha.68",
+    "@graphql-debugger/trace-schema": "^0.0.0-alpha.68",
     "@graphql-tools/schema": "10.0.0",
     "@prisma/client": "^5.5.2",
     "@prisma/instrumentation": "^5.5.2",
@@ -14,7 +14,7 @@
     "@types/node": "20.8.9",
     "express": "^4.18.2",
     "gql-tag": "1.0.1",
-    "graphql-debugger": "^0.0.0-alpha.64",
+    "graphql-debugger": "^0.0.0-alpha.68",
     "graphql-yoga": "5.0.0",
     "prisma": "^5.5.2",
     "ts-node": "10.9.1",
