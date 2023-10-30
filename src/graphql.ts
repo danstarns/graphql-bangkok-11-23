@@ -7,11 +7,16 @@ import {
 } from "@graphql-debugger/trace-schema";
 
 const typeDefs = /* GraphQL */ `
+  type User {
+    id: ID!
+    email: String!
+  }
+
   type Document {
     id: ID!
     title: String!
     content: String!
-    authorId: String!
+    author: User!
   }
 
   type Mutation {
@@ -90,6 +95,19 @@ const resolvers = {
       }
 
       return document;
+    },
+  },
+  Document: {
+    async author(parent) {
+      const author = await prisma.document
+        .findUnique({
+          where: {
+            id: parent.id,
+          },
+        })
+        .author();
+
+      return author;
     },
   },
 };
